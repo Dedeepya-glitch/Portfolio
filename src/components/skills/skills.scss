@@ -1,0 +1,139 @@
+@import "../../app.scss";
+
+.skills{
+    background:linear-gradient(180deg, rgb(9, 5, 23), rgb(19, 5, 67)) ;
+    height: 100%;
+
+    .textContainer{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 10px;
+        padding-top: 30px;
+
+        @include mobile{
+          display: none;
+        }
+
+        hr{
+            width: 500px;
+            border: none;
+            border-top: 0.5px solid rgb(82, 48, 145);
+        }
+        p{
+            font-weight: 200;
+            font-size: 20px;
+            color: rgb(82, 62, 105);
+            text-align: right;
+
+            @include mobile{
+              display: none;
+            }
+        }
+    }
+
+    .titleContainer{
+        justify-content: center;
+        display: flex;
+
+        h1{
+            font-size: 96px;
+            font-weight: 100;
+
+            @include mobile{
+              font-size: 28px;
+            }
+        }
+    }
+
+    .listContainer{
+        align-items: center;
+        justify-content: center;
+        display: grid;
+        grid-template-rows: repeat(4, auto); /* Adjust rows based on number of images */
+        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+        padding-left: 9em;
+
+        //Mobile Responsiveness
+        // @media only screen and (max-width: 768px) {
+        //   grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+        // }
+
+        //reomved grid in the mobile display
+        @include mobile{
+          display: block;
+          max-width: 738px;
+          padding: 5px;
+        }
+
+        img{
+            width: 100px;
+            height: 100px;
+
+            //use this to place the icons of skills 
+          @include mobile{
+            margin-bottom: 20px;
+            margin-right: 10px;
+            margin-left: 20px;
+          }
+        }
+
+        img:nth-child(1) {
+            grid-row: 1;
+            grid-column: 1; /* Adjust column if needed */
+          }
+          
+        img:nth-child(2) {
+            grid-row: 1;
+            grid-column: 2;
+          }
+          
+        img:nth-child(3) {
+            grid-row: 1;
+            grid-column: 3;
+          }
+          img:nth-child(4) {
+            grid-row: 1;
+            grid-column: 4;
+          }
+          img:nth-child(5) {
+            grid-row: 1;
+            grid-column: 5;
+          }
+          img:nth-child(6) {
+            grid-row: 2;
+            grid-column: 1;
+          }
+          img:nth-child(7) {
+            grid-row: 2;
+            grid-column: 2;
+          }
+          img:nth-child(8) {
+            grid-row: 2;
+            grid-column: 3;
+          }
+          img:nth-child(9) {
+            grid-row: 2;
+            grid-column: 4;
+          }
+          img:nth-child(10) {
+            grid-row: 2;
+            grid-column: 5;
+          }
+          img:nth-child(11) {
+            grid-row: 3;
+            grid-column: 2;
+          }
+          img:nth-child(12) {
+            grid-row: 3;
+            grid-column: 3;
+          } 
+          img:nth-child(13) {
+            grid-row: 3;
+            grid-column: 4;
+          } 
+          
+    
+    }
+}

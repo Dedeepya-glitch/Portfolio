@@ -1,0 +1,111 @@
+@import "../../app.scss";
+
+// z index places the elements in the back or front
+.hero{
+    height: calc(100vh - 100px);
+    background:linear-gradient(180deg, rgb(9, 5, 23), rgb(19, 5, 67)) ;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    .wrapper{
+        max-width: 1336px; 
+        height: 100%;
+        margin: auto;
+       
+        .textContainer{
+            height: 100%;
+            // width: 50%; //use this while adding  an image
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+
+            @include mobile{
+                height: 50%;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+            }
+
+            h2{
+                font-size: 30px;
+                color: rgb(255, 255, 0);
+                letter-spacing: 10px;
+
+                @include mobile{
+                    font-size: 4px;
+                    text-align: center;
+                }
+
+            }
+
+            h1{
+                width: 80%;
+                font-size: 80px;
+
+                @include mobile{
+                    font-size: 72px;
+                    text-align: center;
+                }
+            }
+
+            .buttons{
+                button{
+                    padding: 20px;
+                    border: 1px solid yellow;
+                    background-color: transparent;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    margin-right: 20px;
+                    color: white;
+                    font-weight: 300 ;
+
+                }
+            }
+
+            img{
+                width: 50px;
+            }
+        }
+    }
+
+    .imageContainer{
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: 0;
+
+        
+        @include mobile{
+            height: 47%;
+            width: 100%;
+            top:unset;
+            bottom: -5px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        img{
+            width: 70%;
+            height: 80%;
+            object-fit: cover;
+            border-radius: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+
+    .slidingText{
+        position:absolute;
+        font-size: 50vh;
+        bottom: 18px;
+        white-space: nowrap;
+        color: rgb(53, 55, 105);
+        width: 50%;
+        font-weight: bold;
+        z-index: -1;
+    }
+}
