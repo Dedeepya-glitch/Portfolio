@@ -1,0 +1,38 @@
+@import "../../app.scss";  //responsiveness code doesn't work if it is not imported 
+
+.navbar{
+    height: 100px;
+
+    .wrapper{
+        max-width: 1366px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+
+        @include mobile{
+            display: flex-end;
+            padding: 20px;
+        }
+
+        span{
+            font-weight: bold;
+
+            // @include mobile{
+            //     display: none;
+            // }
+        }
+
+        .social{
+            display: flex;
+            gap: 20px;
+
+            img{
+                width: 35px;
+                height: 35px;
+                
+            }
+        }
+    }
+}
