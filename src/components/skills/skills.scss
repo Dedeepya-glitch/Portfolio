@@ -62,7 +62,7 @@
 
         //reomved grid in the mobile display
         @include mobile{
-          display: block;
+          display: unset;
           max-width: 738px;
           padding: 5px;
         }

@@ -6,7 +6,6 @@
     margin: auto;
     display: flex;
     align-items: center;
-    gap: 50px;
 
     @include mobile{
         width: 100%;
@@ -24,7 +23,7 @@
             gap: 20px;
             text-align: center;
             align-items: center;
-            margin-top: 50px;
+            // margin-top: 50px;
         }
 
         h1{
@@ -44,6 +43,7 @@
     .formContainer{
         flex: 1;
         position: relative;
+        top: -32px;
 
         @include mobile{
             padding: 50px;
